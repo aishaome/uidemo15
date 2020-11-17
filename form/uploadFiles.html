@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive Admin Dashboard Template">
+    <meta name="keywords" content="admin,dashboard">
+    <meta name="author" content="stacks">
+    <!-- Title -->
+    <title></title>
+    <style>
+        body {
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background: #fff;color:#000">
+	<form action="http://api.cqbrh.com/api/business/import" enctype="multipart/form-data" id="submitForm" method="post">
+			<input type="file" value id="fileUploadFile" name="fileUploadFile">
+    </form>
+    <button type="button" onclick="submitData()" style="background-color:#4e86cf;color:#fff; border:1px solid #696e91;width:180px;height:48px;" class="btn btn-danger">提交设置</button>
+	<!-- Javascripts 插件 -->
+    <script id="api" src="http://api.cqbrh.com/Components/scripts/form.js?project_id=9e315a26eb3944158a90296ab7ad2b99&table_name=cms_ly_systemsettings"></script>
+    <script>
+
+        // 提交数据 ajaxSubmit
+        function submitData() {
+            $('#submitForm').ajaxSubmit({
+                    data: {
+                        table_name: 'cms_lfh_l6',
+                        project_id: 'cab9135025654ad2a517a81f85c2e6d8',
+                        table_desc: '工程进度管控',
+                        user_id: 'cab9135025654ad2a517a81f85c2e6d8',
+                        user_name: '超级管理员',
+                    },
+                    beforeSend: function () {
+                        console.log("数据正在导入中......");
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            console.log(data.message);
+ 
+                        } else {
+                            console.log(data.errorMessage);
+                        }
+                    },
+                    complete: function () {
+                    }
+                });
+        }
+		
+		
+    </script>
+</body>
+
+</html>

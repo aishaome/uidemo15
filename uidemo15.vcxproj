@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C807715D-87F2-34C2-A11E-525460CA5FB2}</ProjectGuid>
+    <RootNamespace>uidemo15</RootNamespace>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>temp\obj\</IntermediateDirectory>
+    <PrimaryOutput>uidemo15</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>temp\obj\</IntermediateDirectory>
+    <PrimaryOutput>uidemo15</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>temp\obj\</IntDir>
+    <TargetName>uidemo15</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>temp\obj\</IntDir>
+    <TargetName>uidemo15</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>MSVC_32</QtInstall>
+    <QtModules>core;sql;network;gui;axcontainer;widgets;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>MSVC_32</QtInstall>
+    <QtModules>core;sql;network;gui;axcontainer;widgets;printsupport</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;api;form;ffmpeg;ffmpeg\ffmpeg3\include;sdk\include;temp\moc;temp\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>temp\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>temp\obj\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;ffmpeg3;QT_NO_DEBUG;QT_AXCONTAINER_LIB;QT_AXBASE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avcodec.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avfilter.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avformat.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\swscale.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avutil.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\swresample.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avdevice.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\sdk\lib\quc.lib";ole32.lib;oleaut32.lib;user32.lib;gdi32.lib;advapi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib;G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\sdk\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*' "   /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\uidemo15.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;ffmpeg3;QT_NO_DEBUG;QT_AXCONTAINER_LIB;QT_AXBASE_LIB;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>G:/OneDrive - kolo/cqbrh/c++/QTMSVC_32/uidemo15/temp/moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>temp\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>temp\rcc</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>temp\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;api;form;ffmpeg;ffmpeg\ffmpeg3\include;sdk\include;temp\moc;temp\ui;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>temp\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>temp\obj\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;ffmpeg3;QT_AXCONTAINER_LIB;QT_AXBASE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avcodec.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avfilter.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avformat.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\swscale.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avutil.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\swresample.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib\avdevice.lib";"G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\sdk\lib\quc.lib";ole32.lib;oleaut32.lib;user32.lib;gdi32.lib;advapi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\ffmpeg\ffmpeg3\winlib;G:\OneDrive - kolo\cqbrh\c++\QTMSVC_32\uidemo15\sdk\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*' "   /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\uidemo15.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;ffmpeg3;QT_AXCONTAINER_LIB;QT_AXBASE_LIB;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>G:/OneDrive - kolo/cqbrh/c++/QTMSVC_32/uidemo15/temp/moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>temp\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>temp\rcc</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>temp\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="api\appinit.cpp" />
+    <ClCompile Include="api\businessprocessing.cpp" />
+    <ClCompile Include="ffmpeg\ffmpeg.cpp" />
+    <ClCompile Include="form\frmlogin.cpp" />
+    <ClCompile Include="form\frmmain.cpp" />
+    <ClCompile Include="api\jsonprocessing.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="api\panelwidget.cpp" />
+    <ClCompile Include="api\qcustomplot.cpp" />
+    <ClCompile Include="api\quiwidget.cpp" />
+    <ClCompile Include="api\tablebutton.cpp" />
+    <ClCompile Include="api\videopanel.cpp" />
+    <ClCompile Include="api\videowidget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="api\appinit.h">
+    </QtMoc>
+    <QtMoc Include="api\businessprocessing.h">
+    </QtMoc>
+    <QtMoc Include="ffmpeg\ffmpeg.h">
+    </QtMoc>
+    <ClInclude Include="ffmpeg\ffmpeghead.h" />
+    <QtMoc Include="form\frmlogin.h">
+    </QtMoc>
+    <QtMoc Include="form\frmmain.h">
+    </QtMoc>
+    <ClInclude Include="head.h" />
+    <QtMoc Include="api\jsonprocessing.h">
+    </QtMoc>
+    <QtMoc Include="api\panelwidget.h">
+    </QtMoc>
+    <QtMoc Include="api\qcustomplot.h">
+    </QtMoc>
+    <QtMoc Include="api\qreplytimeout.h">
+    </QtMoc>
+    <QtMoc Include="api\quiwidget.h">
+    </QtMoc>
+    <QtMoc Include="api\tablebutton.h">
+    </QtMoc>
+    <QtMoc Include="api\videopanel.h">
+    </QtMoc>
+    <QtMoc Include="api\videowidget.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="temp\moc\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W0 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;temp\moc\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">temp\moc\moc_predefs.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W0 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;temp\moc\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">temp\moc\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="form\frmlogin.ui">
+    </QtUic>
+    <QtUic Include="form\frmmain.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="other\image\Import.png" />
+    <None Include="other\image\add.png" />
+    <None Include="other\qss\black\add_bottom.png" />
+    <None Include="other\qss\blackblue\add_bottom.png" />
+    <None Include="other\qss\blackvideo\add_bottom.png" />
+    <None Include="other\qss\blue\add_bottom.png" />
+    <None Include="other\qss\darkblack\add_bottom.png" />
+    <None Include="other\qss\darkblue\add_bottom.png" />
+    <None Include="other\qss\darkgray\add_bottom.png" />
+    <None Include="other\qss\flatblack\add_bottom.png" />
+    <None Include="other\qss\flatblue\add_bottom.png" />
+    <None Include="other\qss\flatwhite\add_bottom.png" />
+    <None Include="other\qss\gray\add_bottom.png" />
+    <None Include="other\qss\lightblack\add_bottom.png" />
+    <None Include="other\qss\lightblue\add_bottom.png" />
+    <None Include="other\qss\lightgray\add_bottom.png" />
+    <None Include="other\qss\psblack\add_bottom.png" />
+    <None Include="other\qss\purple\add_bottom.png" />
+    <None Include="other\qss\silvery\add_bottom.png" />
+    <None Include="other\qss\black\add_left.png" />
+    <None Include="other\qss\blackblue\add_left.png" />
+    <None Include="other\qss\blackvideo\add_left.png" />
+    <None Include="other\qss\blue\add_left.png" />
+    <None Include="other\qss\darkblack\add_left.png" />
+    <None Include="other\qss\darkblue\add_left.png" />
+    <None Include="other\qss\darkgray\add_left.png" />
+    <None Include="other\qss\flatblack\add_left.png" />
+    <None Include="other\qss\flatblue\add_left.png" />
+    <None Include="other\qss\flatwhite\add_left.png" />
+    <None Include="other\qss\gray\add_left.png" />
+    <None Include="other\qss\lightblack\add_left.png" />
+    <None Include="other\qss\lightblue\add_left.png" />
+    <None Include="other\qss\lightgray\add_left.png" />
+    <None Include="other\qss\psblack\add_left.png" />
+    <None Include="other\qss\purple\add_left.png" />
+    <None Include="other\qss\silvery\add_left.png" />
+    <None Include="other\qss\black\add_right.png" />
+    <None Include="other\qss\blackblue\add_right.png" />
+    <None Include="other\qss\blackvideo\add_right.png" />
+    <None Include="other\qss\blue\add_right.png" />
+    <None Include="other\qss\darkblack\add_right.png" />
+    <None Include="other\qss\darkblue\add_right.png" />
+    <None Include="other\qss\darkgray\add_right.png" />
+    <None Include="other\qss\flatblack\add_right.png" />
+    <None Include="other\qss\flatblue\add_right.png" />
+    <None Include="other\qss\flatwhite\add_right.png" />
+    <None Include="other\qss\gray\add_right.png" />
+    <None Include="other\qss\lightblack\add_right.png" />
+    <None Include="other\qss\lightblue\add_right.png" />
+    <None Include="other\qss\lightgray\add_right.png" />
+    <None Include="other\qss\psblack\add_right.png" />
+    <None Include="other\qss\purple\add_right.png" />
+    <None Include="other\qss\silvery\add_right.png" />
+    <None Include="other\qss\black\add_top.png" />
+    <None Include="other\qss\blackblue\add_top.png" />
+    <None Include="other\qss\blackvideo\add_top.png" />
+    <None Include="other\qss\blue\add_top.png" />
+    <None Include="other\qss\darkblack\add_top.png" />
+    <None Include="other\qss\darkblue\add_top.png" />
+    <None Include="other\qss\darkgray\add_top.png" />
+    <None Include="other\qss\flatblack\add_top.png" />
+    <None Include="other\qss\flatblue\add_top.png" />
+    <None Include="other\qss\flatwhite\add_top.png" />
+    <None Include="other\qss\gray\add_top.png" />
+    <None Include="other\qss\lightblack\add_top.png" />
+    <None Include="other\qss\lightblue\add_top.png" />
+    <None Include="other\qss\lightgray\add_top.png" />
+    <None Include="other\qss\psblack\add_top.png" />
+    <None Include="other\qss\purple\add_top.png" />
+    <None Include="other\qss\silvery\add_top.png" />
+    <None Include="other\image\admin.png" />
+    <None Include="other\image\authoring.png" />
+    <None Include="other\image\authorok.png" />
+    <None Include="other\image\bg_title.png" />
+    <None Include="other\qss\black.css" />
+    <None Include="other\qss\blackblue.css" />
+    <None Include="other\qss\blackvideo.css" />
+    <None Include="other\qss\blue.css" />
+    <None Include="other\qss\black\branch_close.png" />
+    <None Include="other\qss\blackblue\branch_close.png" />
+    <None Include="other\qss\blackvideo\branch_close.png" />
+    <None Include="other\qss\blue\branch_close.png" />
+    <None Include="other\qss\darkblack\branch_close.png" />
+    <None Include="other\qss\darkblue\branch_close.png" />
+    <None Include="other\qss\darkgray\branch_close.png" />
+    <None Include="other\qss\flatblack\branch_close.png" />
+    <None Include="other\qss\flatblue\branch_close.png" />
+    <None Include="other\qss\flatwhite\branch_close.png" />
+    <None Include="other\qss\gray\branch_close.png" />
+    <None Include="other\qss\lightblack\branch_close.png" />
+    <None Include="other\qss\lightblue\branch_close.png" />
+    <None Include="other\qss\lightgray\branch_close.png" />
+    <None Include="other\qss\psblack\branch_close.png" />
+    <None Include="other\qss\purple\branch_close.png" />
+    <None Include="other\qss\silvery\branch_close.png" />
+    <None Include="other\qss\black\branch_open.png" />
+    <None Include="other\qss\blackblue\branch_open.png" />
+    <None Include="other\qss\blackvideo\branch_open.png" />
+    <None Include="other\qss\blue\branch_open.png" />
+    <None Include="other\qss\darkblack\branch_open.png" />
+    <None Include="other\qss\darkblue\branch_open.png" />
+    <None Include="other\qss\darkgray\branch_open.png" />
+    <None Include="other\qss\flatblack\branch_open.png" />
+    <None Include="other\qss\flatblue\branch_open.png" />
+    <None Include="other\qss\flatwhite\branch_open.png" />
+    <None Include="other\qss\gray\branch_open.png" />
+    <None Include="other\qss\lightblack\branch_open.png" />
+    <None Include="other\qss\lightblue\branch_open.png" />
+    <None Include="other\qss\lightgray\branch_open.png" />
+    <None Include="other\qss\psblack\branch_open.png" />
+    <None Include="other\qss\purple\branch_open.png" />
+    <None Include="other\qss\silvery\branch_open.png" />
+    <None Include="other\image\btn_check_off1.png" />
+    <None Include="other\image\btn_check_on1.png" />
+    <None Include="other\image\btn_check_on2.png" />
+    <None Include="other\qss\black\calendar_nextmonth.png" />
+    <None Include="other\qss\blackblue\calendar_nextmonth.png" />
+    <None Include="other\qss\blackvideo\calendar_nextmonth.png" />
+    <None Include="other\qss\blue\calendar_nextmonth.png" />
+    <None Include="other\qss\darkblack\calendar_nextmonth.png" />
+    <None Include="other\qss\darkblue\calendar_nextmonth.png" />
+    <None Include="other\qss\darkgray\calendar_nextmonth.png" />
+    <None Include="other\qss\flatblack\calendar_nextmonth.png" />
+    <None Include="other\qss\flatblue\calendar_nextmonth.png" />
+    <None Include="other\qss\flatwhite\calendar_nextmonth.png" />
+    <None Include="other\qss\gray\calendar_nextmonth.png" />
+    <None Include="other\qss\lightblack\calendar_nextmonth.png" />
+    <None Include="other\qss\lightblue\calendar_nextmonth.png" />
+    <None Include="other\qss\lightgray\calendar_nextmonth.png" />
+    <None Include="other\qss\psblack\calendar_nextmonth.png" />
+    <None Include="other\qss\purple\calendar_nextmonth.png" />
+    <None Include="other\qss\silvery\calendar_nextmonth.png" />
+    <None Include="other\qss\black\calendar_prevmonth.png" />
+    <None Include="other\qss\blackblue\calendar_prevmonth.png" />
+    <None Include="other\qss\blackvideo\calendar_prevmonth.png" />
+    <None Include="other\qss\blue\calendar_prevmonth.png" />
+    <None Include="other\qss\darkblack\calendar_prevmonth.png" />
+    <None Include="other\qss\darkblue\calendar_prevmonth.png" />
+    <None Include="other\qss\darkgray\calendar_prevmonth.png" />
+    <None Include="other\qss\flatblack\calendar_prevmonth.png" />
+    <None Include="other\qss\flatblue\calendar_prevmonth.png" />
+    <None Include="other\qss\flatwhite\calendar_prevmonth.png" />
+    <None Include="other\qss\gray\calendar_prevmonth.png" />
+    <None Include="other\qss\lightblack\calendar_prevmonth.png" />
+    <None Include="other\qss\lightblue\calendar_prevmonth.png" />
+    <None Include="other\qss\lightgray\calendar_prevmonth.png" />
+    <None Include="other\qss\psblack\calendar_prevmonth.png" />
+    <None Include="other\qss\purple\calendar_prevmonth.png" />
+    <None Include="other\qss\silvery\calendar_prevmonth.png" />
+    <None Include="other\qss\black\checkbox_checked.png" />
+    <None Include="other\qss\blackblue\checkbox_checked.png" />
+    <None Include="other\qss\blackvideo\checkbox_checked.png" />
+    <None Include="other\qss\blue\checkbox_checked.png" />
+    <None Include="other\qss\darkblack\checkbox_checked.png" />
+    <None Include="other\qss\darkblue\checkbox_checked.png" />
+    <None Include="other\qss\darkgray\checkbox_checked.png" />
+    <None Include="other\qss\flatblack\checkbox_checked.png" />
+    <None Include="other\qss\flatblue\checkbox_checked.png" />
+    <None Include="other\qss\flatwhite\checkbox_checked.png" />
+    <None Include="other\qss\gray\checkbox_checked.png" />
+    <None Include="other\qss\lightblack\checkbox_checked.png" />
+    <None Include="other\qss\lightblue\checkbox_checked.png" />
+    <None Include="other\qss\lightgray\checkbox_checked.png" />
+    <None Include="other\qss\psblack\checkbox_checked.png" />
+    <None Include="other\qss\purple\checkbox_checked.png" />
+    <None Include="other\qss\silvery\checkbox_checked.png" />
+    <None Include="other\qss\black\checkbox_checked_disable.png" />
+    <None Include="other\qss\blackblue\checkbox_checked_disable.png" />
+    <None Include="other\qss\blackvideo\checkbox_checked_disable.png" />
+    <None Include="other\qss\blue\checkbox_checked_disable.png" />
+    <None Include="other\qss\darkblack\checkbox_checked_disable.png" />
+    <None Include="other\qss\darkblue\checkbox_checked_disable.png" />
+    <None Include="other\qss\darkgray\checkbox_checked_disable.png" />
+    <None Include="other\qss\flatblack\checkbox_checked_disable.png" />
+    <None Include="other\qss\flatblue\checkbox_checked_disable.png" />
+    <None Include="other\qss\flatwhite\checkbox_checked_disable.png" />
+    <None Include="other\qss\gray\checkbox_checked_disable.png" />
+    <None Include="other\qss\lightblack\checkbox_checked_disable.png" />
+    <None Include="other\qss\lightblue\checkbox_checked_disable.png" />
+    <None Include="other\qss\lightgray\checkbox_checked_disable.png" />
+    <None Include="other\qss\psblack\checkbox_checked_disable.png" />
+    <None Include="other\qss\purple\checkbox_checked_disable.png" />
+    <None Include="other\qss\silvery\checkbox_checked_disable.png" />
+    <None Include="other\qss\black\checkbox_parcial.png" />
+    <None Include="other\qss\blackblue\checkbox_parcial.png" />
+    <None Include="other\qss\blackvideo\checkbox_parcial.png" />
+    <None Include="other\qss\blue\checkbox_parcial.png" />
+    <None Include="other\qss\darkblack\checkbox_parcial.png" />
+    <None Include="other\qss\darkblue\checkbox_parcial.png" />
+    <None Include="other\qss\darkgray\checkbox_parcial.png" />
+    <None Include="other\qss\flatblack\checkbox_parcial.png" />
+    <None Include="other\qss\flatblue\checkbox_parcial.png" />
+    <None Include="other\qss\flatwhite\checkbox_parcial.png" />
+    <None Include="other\qss\gray\checkbox_parcial.png" />
+    <None Include="other\qss\lightblack\checkbox_parcial.png" />
+    <None Include="other\qss\lightblue\checkbox_parcial.png" />
+    <None Include="other\qss\lightgray\checkbox_parcial.png" />
+    <None Include="other\qss\psblack\checkbox_parcial.png" />
+    <None Include="other\qss\purple\checkbox_parcial.png" />
+    <None Include="other\qss\silvery\checkbox_parcial.png" />
+    <None Include="other\qss\black\checkbox_parcial_disable.png" />
+    <None Include="other\qss\blackblue\checkbox_parcial_disable.png" />
+    <None Include="other\qss\blackvideo\checkbox_parcial_disable.png" />
+    <None Include="other\qss\blue\checkbox_parcial_disable.png" />
+    <None Include="other\qss\darkblack\checkbox_parcial_disable.png" />
+    <None Include="other\qss\darkblue\checkbox_parcial_disable.png" />
+    <None Include="other\qss\darkgray\checkbox_parcial_disable.png" />
+    <None Include="other\qss\flatblack\checkbox_parcial_disable.png" />
+    <None Include="other\qss\flatblue\checkbox_parcial_disable.png" />
+    <None Include="other\qss\flatwhite\checkbox_parcial_disable.png" />
+    <None Include="other\qss\gray\checkbox_parcial_disable.png" />
+    <None Include="other\qss\lightblack\checkbox_parcial_disable.png" />
+    <None Include="other\qss\lightblue\checkbox_parcial_disable.png" />
+    <None Include="other\qss\lightgray\checkbox_parcial_disable.png" />
+    <None Include="other\qss\psblack\checkbox_parcial_disable.png" />
+    <None Include="other\qss\purple\checkbox_parcial_disable.png" />
+    <None Include="other\qss\silvery\checkbox_parcial_disable.png" />
+    <None Include="other\qss\black\checkbox_unchecked.png" />
+    <None Include="other\qss\blackblue\checkbox_unchecked.png" />
+    <None Include="other\qss\blackvideo\checkbox_unchecked.png" />
+    <None Include="other\qss\blue\checkbox_unchecked.png" />
+    <None Include="other\qss\darkblack\checkbox_unchecked.png" />
+    <None Include="other\qss\darkblue\checkbox_unchecked.png" />
+    <None Include="other\qss\darkgray\checkbox_unchecked.png" />
+    <None Include="other\qss\flatblack\checkbox_unchecked.png" />
+    <None Include="other\qss\flatblue\checkbox_unchecked.png" />
+    <None Include="other\qss\flatwhite\checkbox_unchecked.png" />
+    <None Include="other\qss\gray\checkbox_unchecked.png" />
+    <None Include="other\qss\lightblack\checkbox_unchecked.png" />
+    <None Include="other\qss\lightblue\checkbox_unchecked.png" />
+    <None Include="other\qss\lightgray\checkbox_unchecked.png" />
+    <None Include="other\qss\psblack\checkbox_unchecked.png" />
+    <None Include="other\qss\purple\checkbox_unchecked.png" />
+    <None Include="other\qss\silvery\checkbox_unchecked.png" />
+    <None Include="other\qss\black\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\blackblue\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\blackvideo\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\blue\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\darkblack\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\darkblue\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\darkgray\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\flatblack\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\flatblue\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\flatwhite\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\gray\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\lightblack\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\lightblue\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\lightgray\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\psblack\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\purple\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\silvery\checkbox_unchecked_disable.png" />
+    <None Include="other\qss\darkblack.css" />
+    <None Include="other\qss\darkblue.css" />
+    <None Include="other\qss\darkgray.css" />
+    <None Include="other\image\delete.png" />
+    <None Include="other\image\denglu1.png" />
+    <None Include="other\image\down.png" />
+    <None Include="other\image\edit.png" />
+    <None Include="other\qss\flatblack.css" />
+    <None Include="other\qss\flatblue.css" />
+    <None Include="other\qss\flatwhite.css" />
+    <None Include="other\image\fontawesome-webfont.ttf" />
+    <None Include="other\qss\gray.css" />
+    <None Include="other\image\inquire.png" />
+    <None Include="other\qss\lightblack.css" />
+    <None Include="other\qss\lightblue.css" />
+    <None Include="other\qss\lightgray.css" />
+    <None Include="other\image\logo.png" />
+    <QtRcc Include="other\main.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main</InitFuncName>
+    </QtRcc>
+    <None Include="other\image\map.jpg" />
+    <None Include="other\qss\psblack.css" />
+    <None Include="other\qss\purple.css" />
+    <QtRcc Include="other\qss.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">qss</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">qss</InitFuncName>
+    </QtRcc>
+    <None Include="other\qss\black\radiobutton_checked.png" />
+    <None Include="other\qss\blackblue\radiobutton_checked.png" />
+    <None Include="other\qss\blackvideo\radiobutton_checked.png" />
+    <None Include="other\qss\blue\radiobutton_checked.png" />
+    <None Include="other\qss\darkblack\radiobutton_checked.png" />
+    <None Include="other\qss\darkblue\radiobutton_checked.png" />
+    <None Include="other\qss\darkgray\radiobutton_checked.png" />
+    <None Include="other\qss\flatblack\radiobutton_checked.png" />
+    <None Include="other\qss\flatblue\radiobutton_checked.png" />
+    <None Include="other\qss\flatwhite\radiobutton_checked.png" />
+    <None Include="other\qss\gray\radiobutton_checked.png" />
+    <None Include="other\qss\lightblack\radiobutton_checked.png" />
+    <None Include="other\qss\lightblue\radiobutton_checked.png" />
+    <None Include="other\qss\lightgray\radiobutton_checked.png" />
+    <None Include="other\qss\psblack\radiobutton_checked.png" />
+    <None Include="other\qss\purple\radiobutton_checked.png" />
+    <None Include="other\qss\silvery\radiobutton_checked.png" />
+    <None Include="other\qss\black\radiobutton_checked_disable.png" />
+    <None Include="other\qss\blackblue\radiobutton_checked_disable.png" />
+    <None Include="other\qss\blackvideo\radiobutton_checked_disable.png" />
+    <None Include="other\qss\blue\radiobutton_checked_disable.png" />
+    <None Include="other\qss\darkblack\radiobutton_checked_disable.png" />
+    <None Include="other\qss\darkblue\radiobutton_checked_disable.png" />
+    <None Include="other\qss\darkgray\radiobutton_checked_disable.png" />
+    <None Include="other\qss\flatblack\radiobutton_checked_disable.png" />
+    <None Include="other\qss\flatblue\radiobutton_checked_disable.png" />
+    <None Include="other\qss\flatwhite\radiobutton_checked_disable.png" />
+    <None Include="other\qss\gray\radiobutton_checked_disable.png" />
+    <None Include="other\qss\lightblack\radiobutton_checked_disable.png" />
+    <None Include="other\qss\lightblue\radiobutton_checked_disable.png" />
+    <None Include="other\qss\lightgray\radiobutton_checked_disable.png" />
+    <None Include="other\qss\psblack\radiobutton_checked_disable.png" />
+    <None Include="other\qss\purple\radiobutton_checked_disable.png" />
+    <None Include="other\qss\silvery\radiobutton_checked_disable.png" />
+    <None Include="other\qss\black\radiobutton_unchecked.png" />
+    <None Include="other\qss\blackblue\radiobutton_unchecked.png" />
+    <None Include="other\qss\blackvideo\radiobutton_unchecked.png" />
+    <None Include="other\qss\blue\radiobutton_unchecked.png" />
+    <None Include="other\qss\darkblack\radiobutton_unchecked.png" />
+    <None Include="other\qss\darkblue\radiobutton_unchecked.png" />
+    <None Include="other\qss\darkgray\radiobutton_unchecked.png" />
+    <None Include="other\qss\flatblack\radiobutton_unchecked.png" />
+    <None Include="other\qss\flatblue\radiobutton_unchecked.png" />
+    <None Include="other\qss\flatwhite\radiobutton_unchecked.png" />
+    <None Include="other\qss\gray\radiobutton_unchecked.png" />
+    <None Include="other\qss\lightblack\radiobutton_unchecked.png" />
+    <None Include="other\qss\lightblue\radiobutton_unchecked.png" />
+    <None Include="other\qss\lightgray\radiobutton_unchecked.png" />
+    <None Include="other\qss\psblack\radiobutton_unchecked.png" />
+    <None Include="other\qss\purple\radiobutton_unchecked.png" />
+    <None Include="other\qss\silvery\radiobutton_unchecked.png" />
+    <None Include="other\qss\black\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\blackblue\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\blackvideo\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\blue\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\darkblack\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\darkblue\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\darkgray\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\flatblack\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\flatblue\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\flatwhite\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\gray\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\lightblack\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\lightblue\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\lightgray\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\psblack\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\purple\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\silvery\radiobutton_unchecked_disable.png" />
+    <None Include="other\qss\silvery.css" />
+    <None Include="other\image\titleclose.png" />
+    <None Include="other\image\titlemax.png" />
+    <None Include="other\image\titlemini.png" />
+    <None Include="other\image\up.png" />
+    <None Include="other\image\update.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

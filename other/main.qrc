@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/bg_title.png</file>
+        <file>image/logo.png</file>
+        <file>image/titleclose.png</file>
+        <file>image/titlemax.png</file>
+        <file>image/titlemini.png</file>
+        <file>image/fontawesome-webfont.ttf</file>
+        <file>image/map.jpg</file>
+        <file>image/btn_check_off1.png</file>
+        <file>image/btn_check_on1.png</file>
+        <file>image/add.png</file>
+        <file>image/delete.png</file>
+        <file>image/denglu1.png</file>
+        <file>image/edit.png</file>
+        <file>image/Import.png</file>
+        <file>image/update.png</file>
+        <file>image/inquire.png</file>
+        <file>image/down.png</file>
+        <file>image/up.png</file>
+        <file>image/authoring.png</file>
+        <file>image/authorok.png</file>
+        <file>image/btn_check_on2.png</file>
+        <file>image/admin.png</file>
+    </qresource>
+</RCC>
